@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Attendance Manager</string>
+    <string name="delete">Yes</string>
+    <string name="nosorry">No</string>
+    <string name="AlertMessage">Are you sure you want to delete this subject ?</string>
+    <string name="subject">Subject</string>
+    <string name="classes_attended">Classes Attended</string>
+    <string name="total_classes">Total Classes</string>
+    <string name="intro_message">It\'s empty here !\n Click on the 3 dot menu and select "Add Subject".</string>
+</resources>

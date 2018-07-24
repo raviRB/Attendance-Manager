@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="droid.ravi.mrrobot.AttendanceManager.MainActivity">
+
+    <item
+        android:id="@+id/Add_Subject"
+        android:title="Add Subject"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/changePercentage"
+        android:title="Req. Percentage"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/reminder"
+        android:checkable="true"
+        android:title="Reminder" />
+    <item
+        android:id="@+id/about"
+        android:title="About"
+        app:showAsAction="never" />
+</menu>
