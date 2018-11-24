@@ -21,7 +21,7 @@ public class AlarmReciever extends BroadcastReceiver {
         Calendar rightNow = Calendar.getInstance();
         int currentHour = rightNow.get(Calendar.HOUR_OF_DAY);
         Log.i("curent hour", String.valueOf(currentHour));
-        if((currentHour>9 && currentHour<11) ||(currentHour>19 && currentHour<22)  ){
+        if((currentHour>=7 && currentHour<=11) ||(currentHour>=19 && currentHour<=22)  ){
             if(currentHour<12)
             {
                 Title="Want to Bunk ?";

@@ -27,6 +27,9 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.startapp.android.publish.adsCommon.StartAppAd;
+import com.startapp.android.publish.adsCommon.StartAppSDK;
+
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>{
@@ -37,12 +40,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private PendingIntent pendingIntent;
     private SharedPreferences pref;
     MenuItem checkable;
-    Dialog introBuilder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        StartAppSDK.init(this, "208093105", false);
+        StartAppAd.disableSplash();
 
         Intent alarmIntent = new Intent(MainActivity.this, AlarmReciever.class);
         pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, alarmIntent, 0);
@@ -305,6 +310,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Toast.makeText(this, "Notifications Canceled", Toast.LENGTH_SHORT).show();
     }
 
-
+    @Override
+    public void onBackPressed() {
+        StartAppAd.onBackPressed(this);
+        super.onBackPressed();
+    }
 
 }

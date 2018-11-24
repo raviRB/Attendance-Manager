@@ -7,4 +7,10 @@
     <string name="classes_attended">Classes Attended</string>
     <string name="total_classes">Total Classes</string>
     <string name="intro_message">It\'s empty here !\n Click on the 3 dot menu and select "Add Subject".</string>
+    <string name="About">Attendance Manager is a simple application that allows you to manage your attendance effectiviely and easily . </string>
+    <string name="Github">Fork us on GitHub</string>
+    <string name="Rate">Rate Us</string>
+    <string name="Icon">Icon Source</string>
+    <string name="Contact">Contact Us</string>
+    <string name="version">Version 2.0</string>
 </resources>

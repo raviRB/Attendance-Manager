@@ -58,6 +58,7 @@
             android:textColor="@color/editPrimaryText"
             android:layout_weight="1"
             android:gravity="center"
+            android:hint="Present + Absent"
             android:inputType="number"/>
     </LinearLayout>
 
@@ -83,6 +84,7 @@
             android:textColor="@color/editPrimaryText"
             android:layout_weight="1"
             android:gravity="center"
+            android:hint="Present"
             android:inputType="number"/>
     </LinearLayout>
 
