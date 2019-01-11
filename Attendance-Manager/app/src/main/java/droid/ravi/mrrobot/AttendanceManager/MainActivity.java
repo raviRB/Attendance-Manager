@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
+        Intent intent;
         switch (item.getItemId()){
 
             case R.id.about:
@@ -207,10 +207,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 changeReminderOption();
                 break;
             case R.id.Add_Subject:
-                Intent intent = new Intent(MainActivity.this, EditorActivity.class);
+                intent = new Intent(MainActivity.this, EditorActivity.class);
                 startActivity(intent);
                 break;
-
+            case R.id.calendar:
+                intent = new Intent(MainActivity.this, CalActivity.class);
+                startActivity(intent);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

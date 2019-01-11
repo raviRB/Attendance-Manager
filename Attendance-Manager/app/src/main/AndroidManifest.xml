@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="droid.ravi.mrrobot.AttendanceManager">
 
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -14,52 +14,60 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name="com.startapp.android.publish.ads.list3d.List3DActivity"
+        <activity
+            android:name="com.startapp.android.publish.ads.list3d.List3DActivity"
             android:theme="@android:style/Theme" />
-
-        <activity android:name="com.startapp.android.publish.adsCommon.activities.OverlayActivity"
-            android:theme="@android:style/Theme.Translucent"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
-
-        <activity android:name="com.startapp.android.publish.adsCommon.activities.FullScreenActivity"
-            android:theme="@android:style/Theme"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.startapp.android.publish.adsCommon.activities.OverlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.startapp.android.publish.adsCommon.activities.FullScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme" />
 
         <service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService" />
         <service android:name="com.startapp.android.publish.common.metaData.InfoEventService" />
-        <service android:name="com.startapp.android.publish.common.metaData.PeriodicJobService"
+        <service
+            android:name="com.startapp.android.publish.common.metaData.PeriodicJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
-        <receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" >
+
+        <receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
-        <activity android:name="droid.ravi.mrrobot.AttendanceManager.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="droid.ravi.mrrobot.AttendanceManager.EditorActivity"
-            android:theme="@style/Edit"/>
-
+        <activity
+            android:name=".EditorActivity"
+            android:theme="@style/Edit" />
 
         <provider
-            android:name="droid.ravi.mrrobot.AttendanceManager.SubjectProvider"
+            android:name=".SubjectProvider"
             android:authorities="droid.ravi.mrrobot.AttendanceManager" />
 
-        <receiver android:name="droid.ravi.mrrobot.AttendanceManager.AlarmReciever">
-        <intent-filter>
-            <action android:name="android.intent.action.BOOT_COMPLETED"/>
-            <category android:name="android.intent.category.HOME" />
-        </intent-filter>
+        <provider
+            android:name=".CalProvider"
+            android:authorities="droid.ravi.mrrobot.AttendanceManager.cal" />
+
+        <receiver android:name=".AlarmReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
         </receiver>
 
-        <activity android:name="droid.ravi.mrrobot.AttendanceManager.AboutActivity">
-
+        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".CalActivity"
+            android:windowSoftInputMode="adjustPan">
         </activity>
     </application>
 

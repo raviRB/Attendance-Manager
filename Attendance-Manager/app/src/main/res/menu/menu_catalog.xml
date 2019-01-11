@@ -5,6 +5,11 @@
     tools:context="droid.ravi.mrrobot.AttendanceManager.MainActivity">
 
     <item
+        android:id="@+id/calendar"
+        android:icon="@drawable/cal_icon"
+        app:showAsAction="always"
+        android:title="Calendar" />
+    <item
         android:id="@+id/Add_Subject"
         android:title="Add Subject"
         app:showAsAction="never" />
