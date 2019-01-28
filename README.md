@@ -11,4 +11,4 @@ An android application for managing Attendance .
 - Option for changing minimum required attendance.
 - Option to disable notifications.
 
-**Download [here](https://pages.github.com/) .**
+**Download [here](https://play.google.com/store/apps/details?id=droid.ravi.mrrobot.AttendanceManager) .**
